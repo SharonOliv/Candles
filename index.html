@@ -28,11 +28,41 @@
   }
 
   .row {
-    display: flex; justify-content: center; align-items: flex-end;
-    gap: 16px; flex-wrap: wrap; margin-bottom: 34px;
-  }
-  .candle { width: 46px; position: relative; }
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(2px, 1.5vw, 10px);
+  flex-wrap: nowrap;
+  margin-bottom: 34px;
+  width: 100%;
+}
 
+.candle {
+  position: relative;
+  width: clamp(30px, 12vw, 46px);
+  flex: 0 1 clamp(30px, 12vw, 46px);
+}
+
+.candle svg {
+  width: 100%;
+  height: auto;
+}
+	
+@media (max-width: 500px) {
+  .row {
+    gap: 3px;
+  }
+
+  .candle {
+    width: 38px;
+    max-width: 38px;
+  }
+
+  .candle svg {
+    width: 38px;
+    height: auto;
+  }
+}
   .flame-wrap {
   position: relative;
   width: 30px;
