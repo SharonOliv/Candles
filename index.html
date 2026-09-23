@@ -65,29 +65,28 @@
 }
   .flame-wrap {
   position: relative;
-  width: 30px;
-  height: 52px;
-  margin: 0 auto -18px;
+  width: 65%;
+  aspect-ratio: 50 / 80;
+  margin: 0 auto -14px;
 }
 
-	.flame {
-	  width: 30px;
-	  height: 52px;
-	  display: block;
-	  transform-origin: 50% 100%;
-	  animation: flicker 0.35s ease-in-out infinite alternate;
-	  transition: opacity 0.35s ease, transform 0.5s ease;
-	}
+.flame {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-origin: 50% 100%;
+  animation: flicker 0.35s ease-in-out infinite alternate;
+  transition: opacity 0.35s ease, transform 0.5s ease;
+}
 
-	.flame.blowing {
-	  animation: blowLean 0.15s ease-in-out infinite alternate;
-	}
+.flame.blowing {
+  animation: blowLean 0.15s ease-in-out infinite alternate;
+}
 
-	.flame.out {
-	  opacity: 0;
-	  transform: scale(0.15) translateY(10px) rotate(20deg);
-	}
-
+.flame.out {
+  opacity: 0;
+  transform: scale(0.15) translateY(10px) rotate(20deg);
+}
 	@keyframes flicker {
 	  from {
 		transform: scaleY(1) rotate(-2deg);
